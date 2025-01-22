@@ -13,8 +13,11 @@ export const Hero = () => {
           transition={{ duration: 0.5 }}
           className="space-y-6"
         >
-          <div className="flex justify-center mb-6">
-            <Avatar className="h-32 w-32 border-4 border-white">
+          <div className="flex justify-center mb-6 relative">
+            <div className="absolute inset-0 rounded-full animate-pulse bg-green-400/30 scale-110" />
+            <div className="absolute inset-0 rounded-full animate-pulse bg-green-300/20 scale-125" style={{ animationDelay: '0.5s' }} />
+            <div className="absolute inset-0 rounded-full animate-pulse bg-green-200/10 scale-150" style={{ animationDelay: '1s' }} />
+            <Avatar className="h-32 w-32 border-4 border-white relative z-10">
               <AvatarImage src="/lovable-uploads/110bf7e1-66b0-4393-99fc-b85b152b1b03.png" alt="भारत सिंग" />
               <AvatarFallback>BS</AvatarFallback>
             </Avatar>
