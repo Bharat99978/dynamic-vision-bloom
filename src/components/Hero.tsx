@@ -14,10 +14,29 @@ export const Hero = () => {
           className="space-y-6"
         >
           <div className="flex justify-center mb-6 relative">
-            <div className="absolute inset-0 rounded-full animate-pulse bg-green-400/30 scale-110" />
-            <div className="absolute inset-0 rounded-full animate-pulse bg-green-300/20 scale-125" style={{ animationDelay: '0.5s' }} />
-            <div className="absolute inset-0 rounded-full animate-pulse bg-green-200/10 scale-150" style={{ animationDelay: '1s' }} />
-            <Avatar className="h-32 w-32 border-4 border-white relative z-10">
+            {/* First aura layer - largest and slowest */}
+            <div className="absolute inset-0 rounded-full bg-green-400/20 animate-[pulse_3s_ease-in-out_infinite] scale-[2.0]" />
+            
+            {/* Second aura layer - medium size and speed */}
+            <div 
+              className="absolute inset-0 rounded-full bg-green-300/30 animate-[pulse_2.5s_ease-in-out_infinite] scale-[1.75]" 
+              style={{ animationDelay: '0.5s' }} 
+            />
+            
+            {/* Third aura layer - smaller and faster */}
+            <div 
+              className="absolute inset-0 rounded-full bg-green-200/40 animate-[pulse_2s_ease-in-out_infinite] scale-[1.5]" 
+              style={{ animationDelay: '1s' }} 
+            />
+            
+            {/* Innermost aura layer - closest to avatar */}
+            <div 
+              className="absolute inset-0 rounded-full bg-green-100/50 animate-[pulse_1.5s_ease-in-out_infinite] scale-[1.25]" 
+              style={{ animationDelay: '1.5s' }} 
+            />
+            
+            {/* Avatar with white border */}
+            <Avatar className="h-32 w-32 border-4 border-white relative z-10 shadow-lg">
               <AvatarImage src="/lovable-uploads/110bf7e1-66b0-4393-99fc-b85b152b1b03.png" alt="भारत सिंग" />
               <AvatarFallback>BS</AvatarFallback>
             </Avatar>
