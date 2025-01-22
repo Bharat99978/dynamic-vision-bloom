@@ -1,45 +1,80 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowDown } from "lucide-react";
+import { Github, Instagram, Twitter, MessageCircle } from "lucide-react";
 
 export const Hero = () => {
-  const scrollToProjects = () => {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
-    <section className="min-h-screen flex items-center justify-center hero-gradient">
-      <div className="max-w-4xl mx-auto text-center text-white p-4">
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-4xl md:text-6xl font-bold mb-6"
-        >
-          Hi, I'm [Your Name]
-        </motion.h1>
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-xl md:text-2xl mb-8"
-        >
-          A Full Stack Developer crafting beautiful digital experiences
-        </motion.p>
+    <section className="hero-gradient section-padding min-h-[80vh] flex items-center">
+      <div className="max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.5 }}
+          className="space-y-6"
         >
-          <Button 
-            onClick={scrollToProjects}
-            variant="secondary" 
-            size="lg"
-            className="group"
-          >
-            View My Work
-            <ArrowDown className="ml-2 group-hover:translate-y-1 transition-transform" />
-          </Button>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+            भारत सिंग
+          </h1>
+          <h2 className="text-2xl md:text-3xl text-white/90 mb-2">
+            Full Stack Developer
+          </h2>
+          <p className="text-lg text-white/80 mb-2">
+            Nagpur, Maharashtra 440022, India
+          </p>
+          <p className="text-lg text-white/80 mb-6">
+            Website:{" "}
+            <a
+              href="https://bootdey.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-white/90 underline"
+            >
+              https://bootdey.com
+            </a>
+          </p>
+
+          <div className="flex justify-center gap-4">
+            <Button variant="outline" size="icon" asChild>
+              <a
+                href="https://github.com/Bharat99978"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary"
+              >
+                <Github className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="outline" size="icon" asChild>
+              <a
+                href="https://www.instagram.com/freefireindia899h/?hl=ur"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="outline" size="icon" asChild>
+              <a
+                href="https://x.com/FireBharat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary"
+              >
+                <Twitter className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="outline" size="icon" asChild>
+              <a
+                href="https://wa.me/+919322461670"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary"
+              >
+                <MessageCircle className="h-5 w-5" />
+              </a>
+            </Button>
+          </div>
         </motion.div>
       </div>
     </section>
