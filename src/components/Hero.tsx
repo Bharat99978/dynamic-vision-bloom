@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Github, Instagram, Twitter, MessageCircle } from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 export const Hero = () => {
   return (
@@ -12,6 +13,13 @@ export const Hero = () => {
           transition={{ duration: 0.5 }}
           className="space-y-6"
         >
+          <div className="flex justify-center mb-6">
+            <Avatar className="h-32 w-32 border-4 border-white">
+              <AvatarImage src="/lovable-uploads/110bf7e1-66b0-4393-99fc-b85b152b1b03.png" alt="भारत सिंग" />
+              <AvatarFallback>BS</AvatarFallback>
+            </Avatar>
+          </div>
+          
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
             भारत सिंग
           </h1>
